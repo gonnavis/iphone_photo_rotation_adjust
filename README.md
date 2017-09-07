@@ -1,7 +1,7 @@
 # iphone_photo_rotation_adjust 纯 js 校正 iphone 照片旋转方向
 
 iphone 竖着拍的照片，实际存储却是横着的，然后在照片 EXIF 里记录了90度向右旋转的信息。<br>
-本方法的主要目的就是把它变成真正竖着的照片，输入一个 <input type="file"> 选中的 file 文件， 输出一个调整过方向的 blob 文件。<br>
+本方法的主要目的就是把它变成真正竖着的照片，输入一个 &lt;input type="file"&gt; 选中的 file 文件， 输出一个调整过方向的 blob 文件。<br>
 blob 格式是 file 格式的父级，一样可以用于 form 表单提交。<br>
 
 使用方法
