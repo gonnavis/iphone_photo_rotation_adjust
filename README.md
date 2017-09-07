@@ -15,7 +15,7 @@ blob 格式是 file 格式的父级，一样可以用于 form 表单提交。<br
     
 js代码
 ```
-  iphone_photo_rotation_adjust(file, 800/*可选 指定输出图像的最大宽度或高度*/).then(function(blob){
+  iphone_photo_rotation_adjust(input.files[0], 800/*可选 指定输出图像的最大宽度或高度*/).then(function(blob){
     var form_data=new FormData();
     form_data.append('photo',blob,'blob.png');
     // ...
