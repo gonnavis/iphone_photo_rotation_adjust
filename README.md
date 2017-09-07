@@ -22,6 +22,8 @@ js代码
   })
 ```
 
+----------------------------------------------------------------------------------
+
 angularjs1代码， 需要包一层 $q.when() 把标准 promise 转成 angular promise
 ```
   $q.when(iphone_photo_rotation_adjust(input.files[0], 800/*可选 指定输出图像的最大宽度或高度*/)).then(function(blob){
