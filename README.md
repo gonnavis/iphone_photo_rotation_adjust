@@ -33,4 +33,5 @@ angularjs1代码， 需要包一层 $q.when() 把标准 promise 转成 angular p
   })
 ```
 
-基于 exif.js ( https://github.com/exif-js/exif-js 用于读取照片旋转方向 ) 和 canvas-to-blob.min.js ( https://github.com/blueimp/JavaScript-Canvas-to-Blob 用于让 safari 支持 canvas.toBlob 方法)
+基于 exif.js ( https://github.com/exif-js/exif-js 用于读取照片旋转方向 ) <br>
+和 canvas-to-blob.min.js ( https://github.com/blueimp/JavaScript-Canvas-to-Blob 用于让 safari 支持 canvas.toBlob 方法)
