@@ -1,4 +1,4 @@
-function iphone_photo_rotation_adjust(file, max_width_or_height) {
+function iphone_photo_rotation_adjust(file, max_width_or_height,mime_type) {
   return new Promise(function(resolve, reject) {
 
 
@@ -26,7 +26,7 @@ function iphone_photo_rotation_adjust(file, max_width_or_height) {
       img.onload=function(){
 
       	var result_width, result_height
-      	if(max_width_or_height){
+      	if(max_width_or_height&&(img.width>max_width_or_height||img.height>max_width_or_height)){
       		if(img.width>img.height){
       			var ratio=max_width_or_height/img.width
 	      		result_width=img.width*ratio
@@ -63,9 +63,11 @@ function iphone_photo_rotation_adjust(file, max_width_or_height) {
           canvas.height=result_height
         }
         ctx.drawImage(img, 0, 0, result_width, result_height)
+
+        mime_type=mime_type||'image/png'
         canvas.toBlob(function(blob){
         	resolve(blob)
-        })
+        },mime_type)
       }
 			if(img.complete){
 				img.onload()
